@@ -11,6 +11,7 @@ public class CharacterData {
 				personality,
 				avatarId,
 				eatenTurn,
+				eatenTurn2,
 				fortuneTurn,
 				guardTurn,
 				fakeFortuneTurn,
@@ -30,17 +31,18 @@ public class CharacterData {
 		UnityEngine.Debug.Log(da);
 		id = int.Parse(data[1]);
 		name = data[2];
-		personality = int.Parse(data[3]);
-		role = int.Parse(data[4]);
-		actRole = int.Parse(data[5]);
-		team = int.Parse(data[6]);
+		role = int.Parse(data[3]);
+		actRole = int.Parse(data[4]);
+		team = int.Parse(data[5]);
+		personality = int.Parse(data[6]);
 		avatarId = int.Parse(data[7]);
 		eatenTurn = int.Parse(data[8]);
-		fortuneTurn = int.Parse(data[9]);
-		fakeFortuneTurn = int.Parse(data[10]);
-		guardTurn = int.Parse(data[11]);
-		fortuneResult = int.Parse(data[12]);
-		fakeFortuneResult = int.Parse(data[13]);
+		eatenTurn2 = int.Parse(data[9]);
+		fortuneTurn = int.Parse(data[10]);
+		fakeFortuneTurn = int.Parse(data[11]);
+		guardTurn = int.Parse(data[12]);
+		fortuneResult = int.Parse(data[13]);
+		fakeFortuneResult = int.Parse(data[14]);
 		//serifu = Resources.Load("WordCSV/" + (int.Parse(data[14])).ToString()) + "CSV") as string;
 	}
 

@@ -12,7 +12,7 @@ public class StageManager : MonoBehaviour {
 	void Awake () {
 		//キャラクターデータベースをGameManagerから取ってきて、配列の大きさを決める
 		characterDataBase = GameManager.instance.GetCharacterDataBase();
-		characterDataBase = new string[14,7];
+		//characterDataBase = new string[16,7];
 	}
 
 	// Use this for initialization
@@ -26,6 +26,7 @@ public class StageManager : MonoBehaviour {
 			//クラス		  インスタンス
 			CharacterData d = new CharacterData();
 			d.SetCharaData(GetRaw(i));
+			print(d.avatarId);
 			GameObject obj = Instantiate(Resources.Load("Character/" 
 				+ d.avatarId.ToString())) as GameObject;
 			//位置を指定

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour {
 		teamCSV = Resources.Load("DataCSV/team") as TextAsset;
 		weakModeCSV = Resources.Load("DataCSV/weakMode") as TextAsset;
 		workModeCSV = Resources.Load("DataCSV/workMode") as TextAsset;
+
+		word1CSV = Resources.Load("WordCSV/1CSV") as TextAsset;
 		
 		characterDataBase = CSVReader.SplitCsvGrid(charactersCSV.text);
 		avatarDataBase = CSVReader.SplitCsvGrid(avatarCSV.text);
@@ -70,14 +72,7 @@ public class GameManager : MonoBehaviour {
 		weakModeDataBase = CSVReader.SplitCsvGrid(weakModeCSV.text);
 		workModeDataBase = CSVReader.SplitCsvGrid(workModeCSV.text);
 
-	}
-
-	public void SetAllWordData () {
-
-		word1CSV = Resources.Load("WordCSV/1CSV") as TextAsset;
-
 		word1DataBase = CSVReader.SplitCsvGrid(word1CSV.text);
-
 
 	}
 
