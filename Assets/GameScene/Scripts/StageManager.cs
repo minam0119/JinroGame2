@@ -3,13 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class StageManager : MonoBehaviour {
+	public static StageManager instance;
+
 	int day;
 	[SerializeField]
-	private List<CharacterViewController> characters = new List<CharacterViewController>();
+	public List<CharacterViewController> characters = new List<CharacterViewController>();
 	string[,] characterDataBase;
 	public Transform[] charaPos;
 
 	void Awake () {
+		if(instance == null){
+			instance = this;
+		}
 		//キャラクターデータベースをGameManagerから取ってきて、配列の大きさを決める
 		characterDataBase = GameManager.instance.GetCharacterDataBase();
 		//characterDataBase = new string[16,7];

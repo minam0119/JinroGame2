@@ -41,13 +41,14 @@ public class GameManager : MonoBehaviour {
 
 	void Start () {
 		SetAllCharacterData();
-		SetAllWordData();
+		//SetAllWordData();
 	}
 	
 	public List<CharacterData> character = new List<CharacterData>();
 	Dictionary<int, CharacterData> characterDictionary = new Dictionary<int, CharacterData>();
 
 	public void SetAllCharacterData () {
+
 
 		//データCSVの読み込み
 		charactersCSV = Resources.Load("DataCSV/charactersCSV") as TextAsset;
